@@ -46,7 +46,34 @@ def binario_quartenario(valor):
 
 
 def binario_octal(valor):
-	return 8
+	valor = str(valor)
+	resto = len(valor) % 3
+	num_octal = ''
+	if resto != 0:
+		if resto == 1:
+			valor = '00' + valor
+		else:
+			valor = '0' + valor
+	for i in range(0, len(valor), 3):
+		trio = valor[i: i + 3]
+		match trio:
+			case '000':
+				num_octal = num_octal + '0'
+			case '001':
+				num_octal = num_octal + '1'
+			case '010':
+				num_octal = num_octal + '2'
+			case '011':
+				num_octal = num_octal + '3'
+			case '100':
+				num_octal = num_octal + '4'
+			case '101':
+				num_octal = num_octal + '5'
+			case '110':
+				num_octal = num_octal + '6'
+			case '111':
+				num_octal = num_octal + '7'
+	return num_octal
 
 
 def binario_decimal(valor):
