@@ -77,9 +77,15 @@ def binario_octal(valor):
 
 
 def binario_decimal(valor):
-	return 10
-
-
+	valor = str(valor)[::-1]
+	num_decimal = 0
+	for i in range(len(valor)):
+		unidade_bin = int(valor[i])
+		valor_decimal = int(unidade_bin) * 2**i
+		num_decimal = num_decimal + valor_decimal
+	return num_decimal
+		
+	
 def binario_hexadecimal(valor):
 	return 16
 
