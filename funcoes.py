@@ -87,5 +87,50 @@ def binario_decimal(valor):
 		
 	
 def binario_hexadecimal(valor):
-	return 16
+	valor = str(valor)
+	resto = len(valor) % 4
+	num_hexadecimal = ''
+	if resto != 0:
+		if resto == 1:
+			valor = '000' + valor
+		elif resto == 2:
+			valor = '00' + valor
+		else:
+			valor = '0' + valor
+	for i in range(0, len(valor), 4):
+		quarteto = valor[i: i + 4]
+		match quarteto:
+			case '0000':
+				num_hexadecimal = num_hexadecimal + '0'
+			case '0001':
+				num_hexadecimal = num_hexadecimal + '1'
+			case '0010':
+				num_hexadecimal = num_hexadecimal + '2'
+			case '0011':
+				num_hexadecimal = num_hexadecimal + '3'
+			case '0100':
+				num_hexadecimal = num_hexadecimal + '4'
+			case '0101':
+				num_hexadecimal = num_hexadecimal + '5'
+			case '0110':
+				num_hexadecimal = num_hexadecimal + '6'
+			case '0111':
+				num_hexadecimal = num_hexadecimal + '7'
+			case '1000':
+				num_hexadecimal = num_hexadecimal + '8'
+			case '1001':
+				num_hexadecimal = num_hexadecimal + '9'
+			case '1010':
+				num_hexadecimal = num_hexadecimal + 'A'
+			case '1011':
+				num_hexadecimal = num_hexadecimal + 'B'
+			case '1100':
+				num_hexadecimal = num_hexadecimal + 'C'
+			case '1101':
+				num_hexadecimal = num_hexadecimal + 'D'
+			case '1110':
+				num_hexadecimal = num_hexadecimal + 'E'
+			case '1111':
+				num_hexadecimal = num_hexadecimal + 'F'
+	return num_hexadecimal
 
