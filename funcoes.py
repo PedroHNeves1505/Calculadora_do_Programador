@@ -1,4 +1,5 @@
 import os
+import app
 
 
 def exibir_titulo():
@@ -10,7 +11,7 @@ def coletar_valores():
 	base = int(input('Digite a base do número para calculo: '))
 	valor = int(input('Digite o valor: '))
 	print('=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~')
-	return base and valor
+	return base, valor
 
 
 def decidir_operacao(base, valor):
@@ -23,8 +24,11 @@ def decidir_operacao(base, valor):
 				binario_hexadecimal(valor),
 			]
 			return resultados
-
-
+		case _:
+			print('Valor de base não suportada pelo sistema!')
+			input('Digite qualquer coisa para sair.')
+			os.system('cls')
+			app.main()
 
 def binario_quartenario(valor):
 	valor = str(valor)
