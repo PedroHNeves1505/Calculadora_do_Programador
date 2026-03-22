@@ -175,3 +175,13 @@ def quartenario_binario(valor):
 def quartenario_octal(valor):
 	valor = quartenario_binario(valor)
 	return binario_octal(valor)
+
+
+def quartenario_decimal(valor):
+	valor = str(valor)[::-1]
+	num_decimal = 0
+	for i in range(len(valor)):
+		unidade_quartenaria = int(valor[i])
+		valor_decimal = int(unidade_quartenaria) * 4**i
+		num_decimal = num_decimal + valor_decimal
+	return num_decimal
