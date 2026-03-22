@@ -156,3 +156,18 @@ def binario_hexadecimal(valor):
 	return num_hexadecimal
 
 
+def quartenario_binario(valor):
+	valor = str(valor)
+	num_binario = ''
+	for digito in valor:
+		match digito:
+			case '0':
+				num_binario = num_binario + '00'
+			case '1':
+				num_binario = num_binario + '01'
+			case '2':
+				num_binario = num_binario + '10'
+			case '3':
+				num_binario = num_binario + '11'
+	return num_binario
+
