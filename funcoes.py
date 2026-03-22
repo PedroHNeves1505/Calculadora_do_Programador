@@ -171,3 +171,7 @@ def quartenario_binario(valor):
 				num_binario = num_binario + '11'
 	return num_binario
 
+
+def quartenario_octal(valor):
+	valor = quartenario_binario(valor)
+	return binario_octal(valor)
