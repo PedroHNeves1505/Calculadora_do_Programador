@@ -185,3 +185,8 @@ def quartenario_decimal(valor):
 		valor_decimal = int(unidade_quartenaria) * 4**i
 		num_decimal = num_decimal + valor_decimal
 	return num_decimal
+
+
+def quartenario_hexadecimal(valor):
+	valor = quartenario_binario(valor)
+	return binario_hexadecimal(valor)
