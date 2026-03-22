@@ -1,5 +1,6 @@
 import funcoes
 import os
+import sys
 
 
 def main():
@@ -9,10 +10,15 @@ def main():
 	base, valor = funcoes.coletar_valores()
 	resultados = funcoes.decidir_operacao(base, valor)
 	funcoes.mostrar_resultado(base, resultados)
-	input('\nPressione Enter para voltar ao menu...')
-	main()
-
-
+	continuar = funcoes.sair_do_sistema()
+	if continuar:
+		input('\nDigite qualquer tecla para voltar ao menu principal.')
+		main()
+	else:
+		print('Saindo so sistema!')
+		sys.exit()
+		
+		
 if __name__ == '__main__':
 	main()
 	

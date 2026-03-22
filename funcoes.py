@@ -33,7 +33,18 @@ def mostrar_resultado(base, resultados):
 			print(f'Resultados\nQuartenario: {resultados[0]}\nOctal : {resultados[1]}\nDecimal : {resultados[2]}\nHexadecimal : {resultados[3]}')
 		case _:
 			return None
-
+	
+	
+def sair_do_sistema():
+	input('\nDigite qualquer tecla para continuar.')
+	os.system('cls')
+	print('=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~')
+	print('Deseja continuar do sistema?')
+	continuar = input('Sim ou Não: ')
+	if continuar == 'sim'.lower():
+		return True
+	else:
+		return False
 
 
 def binario_quartenario(valor):
