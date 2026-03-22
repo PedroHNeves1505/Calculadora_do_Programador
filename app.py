@@ -9,7 +9,7 @@ def main():
 	funcoes.exibir_titulo()
 	base, valor = funcoes.coletar_valores()
 	resultados = funcoes.decidir_operacao(base, valor)
-	funcoes.mostrar_resultado(base, resultados)
+	funcoes.mostrar_resultado(base, resultados, valor)
 	continuar = funcoes.sair_do_sistema()
 	if continuar:
 		input('\nDigite qualquer tecla para voltar ao menu principal.')

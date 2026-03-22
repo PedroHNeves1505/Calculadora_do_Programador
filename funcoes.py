@@ -27,10 +27,10 @@ def decidir_operacao(base, valor):
 			return None
 
 
-def mostrar_resultado(base, resultados):
+def mostrar_resultado(base, resultados, valor):
 	match base:
 		case 2:
-			print(f'Resultados\nQuartenario: {resultados[0]}\nOctal : {resultados[1]}\nDecimal : {resultados[2]}\nHexadecimal : {resultados[3]}')
+			print(f'Resultados\nBinario : {valor}\nQuartenario: {resultados[0]}\nOctal : {resultados[1]}\nDecimal : {resultados[2]}\nHexadecimal : {resultados[3]}')
 		case _:
 			return None
 	
@@ -154,4 +154,5 @@ def binario_hexadecimal(valor):
 			case '1111':
 				num_hexadecimal = num_hexadecimal + 'F'
 	return num_hexadecimal
+
 
