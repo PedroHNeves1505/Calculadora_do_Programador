@@ -277,3 +277,12 @@ def decimal_octal(valor):
 		num_octal = str(resto) + num_octal
 		valor = valor // 8
 	return num_octal
+
+
+def decimal_hexadecimal(valor):
+	num_hexadecimal = ''
+	while valor > 0:
+		resto = valor % 16
+		num_hexadecimal = str(resto) + num_hexadecimal
+		valor = valor // 16
+	return num_hexadecimal
