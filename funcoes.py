@@ -238,3 +238,8 @@ def octal_decimal(valor):
 		valor_decimal = int(unidade_quartenaria) * 8**i
 		num_decimal = num_decimal + valor_decimal
 	return num_decimal
+
+
+def octal_hexadecimal(valor):
+	valor = octal_binario(valor)
+	return binario_hexadecimal(valor)
