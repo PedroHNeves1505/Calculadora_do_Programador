@@ -335,3 +335,8 @@ def hexadecimal_binario(valor):
 			case 'F':
 				num_binario = num_binario + '1111'
 	return num_binario
+
+
+def hexadecimal_quartenario(valor):
+	valor = hexadecimal_binario(valor)
+	return binario_quartenario(valor)
