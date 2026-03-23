@@ -295,3 +295,43 @@ def decimal_hexadecimal(valor):
 		num_hexadecimal = str(resto) + num_hexadecimal
 		valor = valor // 16
 	return num_hexadecimal
+
+
+def hexadecimal_binario(valor):
+	valor = str(valor)
+	num_binario = ''
+	for digito in valor:
+		match digito:
+			case '0':
+				num_binario = num_binario + '0000'
+			case '1':
+				num_binario = num_binario + '0001'
+			case '2':
+				num_binario = num_binario + '0010'
+			case '3':
+				num_binario = num_binario + '0011'
+			case '4':
+				num_binario = num_binario + '0100'
+			case '5':
+				num_binario = num_binario + '0101'
+			case '6':
+				num_binario = num_binario + '0110'
+			case '7':
+				num_binario = num_binario + '0111'
+			case '8':
+				num_binario = num_binario + '1000'
+			case '9':
+				num_binario = num_binario + '1001'
+			case 'A':
+				num_binario = num_binario + '1010'
+			case 'B':
+				num_binario = num_binario + '1011'
+			case 'C':
+				num_binario = num_binario + '1100'
+			case 'D':
+				num_binario = num_binario + '1101'
+			case 'E':
+				num_binario = num_binario + '1110'
+			case 'F':
+				num_binario = num_binario + '1111'
+	return num_binario
