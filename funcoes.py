@@ -340,3 +340,8 @@ def hexadecimal_binario(valor):
 def hexadecimal_quartenario(valor):
 	valor = hexadecimal_binario(valor)
 	return binario_quartenario(valor)
+
+
+def hexadecimal_octal(valor):
+	valor = hexadecimal_binario(valor)
+	return binario_octal(valor)
