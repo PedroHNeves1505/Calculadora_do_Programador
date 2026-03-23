@@ -43,6 +43,13 @@ def decidir_operacao(base, valor):
 				decimal_octal(valor),
 				decimal_hexadecimal(valor),
 			]
+		case 16:
+			return [
+				hexadecimal_binario(valor),
+				hexadecimal_quartenario(valor),
+				hexadecimal_octal(valor),
+				hexadecimal_decimal(valor),
+			]
 		case _:
 			print('Valor de base não suportada pelo sistema!')
 			return None
@@ -58,6 +65,8 @@ def mostrar_resultado(base, resultados, valor):
 			print(f'Resultados\nBinario : {resultados[0]}\nQuartenario: {resultados[1]}\nOctal : {valor}\nDecimal : {resultados[2]}\nHexadecimal : {resultados[3]}')
 		case 10:
 			print(f'Resultados\nBinario : {resultados[0]}\nQuartenario: {resultados[1]}\nOctal : {resultados[2]}\nDecimal : {valor}\nHexadecimal : {resultados[3]}')
+		case 16:
+			print(f'Resultados\nBinario : {resultados[0]}\nQuartenario: {resultados[1]}\nOctal : {resultados[2]}\nDecimal : {resultados[3]}\nHexadecimal : {valor}')
 		case _:
 			return None
 	
