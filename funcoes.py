@@ -228,3 +228,13 @@ def octal_binario(valor):
 def octal_quartenario(valor):
 	valor = octal_binario(valor)
 	return binario_quartenario(valor)
+
+
+def octal_decimal(valor):
+	valor = str(valor)[::-1]
+	num_decimal = 0
+	for i in range(len(valor)):
+		unidade_quartenaria = int(valor[i])
+		valor_decimal = int(unidade_quartenaria) * 8**i
+		num_decimal = num_decimal + valor_decimal
+	return num_decimal
