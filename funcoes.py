@@ -224,3 +224,7 @@ def octal_binario(valor):
 				num_binario = num_binario + '111'
 	return num_binario
 
+
+def octal_quartenario(valor):
+	valor = octal_binario(valor)
+	return binario_quartenario(valor)
