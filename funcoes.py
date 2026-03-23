@@ -22,6 +22,13 @@ def decidir_operacao(base, valor):
 				binario_decimal(valor),
 				binario_hexadecimal(valor),
 			]
+		case 4:
+			return [
+				quartenario_binario(valor),
+				quartenario_octal(valor),
+				quartenario_decimal(valor),
+				quartenario_hexadecimal(valor),
+			]
 		case _:
 			print('Valor de base não suportada pelo sistema!')
 			return None
@@ -31,6 +38,8 @@ def mostrar_resultado(base, resultados, valor):
 	match base:
 		case 2:
 			print(f'Resultados\nBinario : {valor}\nQuartenario: {resultados[0]}\nOctal : {resultados[1]}\nDecimal : {resultados[2]}\nHexadecimal : {resultados[3]}')
+		case 4:
+			print(f'Resultados\nBinario : {resultados[0]}\nQuartenario: {valor}\nOctal : {resultados[1]}\nDecimal : {resultados[2]}\nHexadecimal : {resultados[3]}')
 		case _:
 			return None
 	
