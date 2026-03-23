@@ -261,3 +261,11 @@ def decimal_binario(valor):
 		num_binario = str(resto) + num_binario
 		valor = valor // 2
 	return num_binario
+def decimal_quartenario(valor):
+	num_quartenario = ''
+	while valor > 0:
+		resto = valor % 4
+		num_quartenario = str(resto) + num_quartenario
+		valor = valor // 4
+	return num_quartenario
+
