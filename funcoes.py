@@ -199,3 +199,28 @@ def quartenario_decimal(valor):
 def quartenario_hexadecimal(valor):
 	valor = quartenario_binario(valor)
 	return binario_hexadecimal(valor)
+
+
+def octal_binario(valor):
+	valor = str(valor)
+	num_binario = ''
+	for digito in valor:
+		match digito:
+			case '0':
+				num_binario = num_binario + '000'
+			case '1':
+				num_binario = num_binario + '001'
+			case '2':
+				num_binario = num_binario + '010'
+			case '3':
+				num_binario = num_binario + '011'
+			case '4':
+				num_binario = num_binario + '100'
+			case '5':
+				num_binario = num_binario + '101'
+			case '6':
+				num_binario = num_binario + '110'
+			case '7':
+				num_binario = num_binario + '111'
+	return num_binario
+
