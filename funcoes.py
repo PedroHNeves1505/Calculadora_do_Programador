@@ -252,8 +252,8 @@ def octal_decimal(valor):
 	valor = str(valor)[::-1]
 	num_decimal = 0
 	for i in range(len(valor)):
-		unidade_quartenaria = int(valor[i])
-		valor_decimal = int(unidade_quartenaria) * 8**i
+		unidade_octal = int(valor[i])
+		valor_decimal = int(unidade_octal) * 8**i
 		num_decimal = num_decimal + valor_decimal
 	return num_decimal
 
@@ -270,6 +270,8 @@ def decimal_binario(valor):
 		num_binario = str(resto) + num_binario
 		valor = valor // 2
 	return num_binario
+
+
 def decimal_quartenario(valor):
 	num_quartenario = ''
 	while valor > 0:
@@ -345,3 +347,14 @@ def hexadecimal_quartenario(valor):
 def hexadecimal_octal(valor):
 	valor = hexadecimal_binario(valor)
 	return binario_octal(valor)
+
+
+def hexadecimal_decimal(valor):
+	valor = str(valor)[::-1]
+	digitos = "0123456789ABCDEF"
+	num_decimal = 0
+	for i in range(len(valor)):
+		unidade_hexadecimal = digitos.find(valor[i])
+		valor_decimal = int(unidade_hexadecimal) * 16**i
+		num_decimal = num_decimal + valor_decimal
+	return num_decimal
