@@ -252,3 +252,12 @@ def octal_decimal(valor):
 def octal_hexadecimal(valor):
 	valor = octal_binario(valor)
 	return binario_hexadecimal(valor)
+
+
+def decimal_binario(valor):
+	num_binario = ''
+	while valor > 0:
+		resto = valor % 2
+		num_binario = str(resto) + num_binario
+		valor = valor // 2
+	return num_binario
