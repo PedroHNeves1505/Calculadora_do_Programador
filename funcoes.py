@@ -269,3 +269,11 @@ def decimal_quartenario(valor):
 		valor = valor // 4
 	return num_quartenario
 
+
+def decimal_octal(valor):
+	num_octal = ''
+	while valor > 0:
+		resto = valor % 8
+		num_octal = str(resto) + num_octal
+		valor = valor // 8
+	return num_octal
